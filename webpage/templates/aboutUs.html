@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %} About us {% endblock %}
+
+{% block encabezado %} 
+	<h2 class="oswald h1inicio">About our company</h2>
+{% endblock %}
+
+{% block contenido %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="parallax-bg parallaxBg1" style="">            
+        <div class="container content parallax-about">
+            <div class="title-box-v2">
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="banner-info light margin-bottom-10">
+                        <i class="rounded-x glyphicon glyphicon-bell"></i>
+                        <div class="overflow-h">
+                            <h3 class="oswald">Our mission</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                    <div class="banner-info light margin-bottom-10">
+                        <i class="rounded-x glyphicon glyphicon-flag"></i>
+                        <div class="overflow-h">
+                            <h3 class="oswald">Our vision</h3>
+                            <p>Phasellus vitae rhoncus ipsum. Aliquam ultricies, velit sit amet scelerisque tincidunt, dolor neque consequat est, a dictum felis metus eget nulla, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                    <div class="banner-info light margin-bottom-10">
+                        <i class="rounded-x glyphicon glyphicon-thumbs-up"></i>
+                        <div class="overflow-h">
+                            <h3 class="oswald">We are good at ...</h3>
+                            <p>Nunc ac ligula ut diam rutrum porttitor. Integer et neque at lacus placerat pretium eu ac dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-20"></div>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive" src="{{STATIC_URL}}image/accoun.png" alt="">
+                </div>
+            </div>    
+        </div><!--/container--> 
+    </div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %} Contact us {% endblock %}
+
+{% block encabezado %} 
+	<h1 class="oswald h1Contact">Contactanos...</h1>
+{% endblock %}
+
+{% block contenido %}
+<section>
+    <div class="mapRespons">
+        <div class="mapContainer center-block" id="map-canvas"></div>
+    </div>
+</section>
+    
+<section>
+    <div class="col-sm-6 text-center mycontent-left">
+    <h2 class="oswald h3bott">Directorio</h2>
+       <h4 class="oswald">Company name</h4>
+       <address>
+            795 Folsom Ave, Suite 600
+            San Francisco, CA 94107<br>
+            <abbr title="1° Phone">P:</abbr> (123) 456-7890<br>
+            OR<br><abbr title="2° Phone">P:</abbr>(123) 485-4587 <br><br>
+            <address>
+                <strong>Facebook</strong><br>
+                <a href="mailto:#" class="fontsUno">@example</a>
+            </address>
+            <address>
+                <strong>Gmail</strong><br>
+                <a href="mailto:#" class="fontsUno">example@gmail.com</a>
+            </address>
+            <address>
+                <strong>Twitter</strong><br>
+                <a href="mailto:#" class="fontsUno">@example</a>
+            </address>
+            <address>
+                <strong>Yahoo</strong><br>
+                <a href="mailto:#" class="fontsUno">example@yahoo.com</a>
+            </address>
+            <address>
+                <strong>Whatsapp</strong><br>
+                <a href="mailto:#" class="fontsUno">(000)-000-0000</a>
+            </address>
+
+       </address>
+    </div>
+</section>
+
+<section>
+    <div class="col-sm-6">
+        <h2 class="oswald h3bott">Envianos un mensaje !</h2>
+        <form id="containerForm" class="form text-left" novalidate="novalidate" method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="input-group lato">
+                <span class="input-group-addon" for="{{ form.subject.id_for_label }}" id="basic-addon1">Your name:</span>
+                {{ form.subject }}
+                <div class="bg-danger" role="alert">
+                    {{ form.subject.errors }}
+                </div>
+            </div>
+            <br>
+            <div class="input-group lato">
+                <span class="input-group-addon" for="{{ form.sender.id_for_label }}" id="basic-addon1">Email address:</span>
+                {{ form.sender }}
+                <div class="bg-danger" role="alert">
+                    {{ form.sender.errors }}
+                </div>
+            </div>
+            <br>
+            <div class="input-group lato">
+                <span class="input-group-addon" for="{{ form.message.id_for_label }}" id="basic-addon1">Your message:</span>
+                {{ form.message }}
+                <div class="bg-danger" role="alert">
+                    {{ form.message.errors }}
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="input-group lato">
+                <button class="btn btn-default" type="submit" value="Submit"> send
+                </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label  for="{{ form.cc_myself.id_for_label }}">
+                 CC yourself? {{ form.cc_myself }}
+                </label>  {{ form.cc_myself.errors }}
+            </div>
+        </form>
+    </div>
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+</section>	
+{% endblock %}

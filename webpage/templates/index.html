@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block encabezado %}
+    <h1 class="pacificOra fontsBig h1inicio">Mirá nuestro reel...</h1>
+{% endblock %}
+
+{% block contenido %}
+    <div class="row">
+        <div class="col-md-8 col-lg-8 col-xs-8 center-block" style="float:none">
+            <div class="box">
+                <div>
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators hidden-xs">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="img-responsive img-full" style="" src="static/image/image4.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h3 class="oswalWit"><a class="oswalWit" href="/servicioUno">Lorem ipsum dolor</a></h3>
+                                    <p class="fontsUno latoWhi">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" style="" src="static/image/image2.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h3 class="oswalWit"><a class="oswalWit" href="/servicioDos"> Lorem ipsum dolor</a></h3>
+                                    <p class="fontsUno latoWhi">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" style="" src="static/image/image3.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h3 class="oswalWit"><a class="oswalWit" href="/servicioTres">Lorem ipsum dolor</a></h3>
+                                    <p class="fontsUno latoWhi">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <br>
+        <br>
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-md-2">
+                
+            </div>
+            <div class="col-md-4">
+                <h3 class="oswald text-center">Bienvenidos a "Company name"</h3>
+                    <p class="latoBla text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h3 class="oswald">Qué...</h3>
+                    <p class="latoBla text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br> veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<br> commodo
+                    consequat. <a href="/aboutUs">MORE</a></p>
+                </div>
+                <div>
+                <h3 class="oswald">Quiénes...</h3>
+                    <p class="latoBla text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br> veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<br> commodo
+                    consequat. <a href="/aboutUs">MORE</a></p>
+                </div>
+                <div>
+                <h3 class="oswald">Cómo...</h3>
+                    <p class="latoBla text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br> veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<br> commodo
+                    consequat. <a href="/aboutUs">MORE</a></p>
+                </div>
+            </div>
+        
+    </div>  
+</div>
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+{% endblock %}
