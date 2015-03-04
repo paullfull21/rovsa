@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+#heroku data base (Base de datos)
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -19,12 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '1fiu7j@xgimz28u0kcvvfrr*wrizb+=+5p6lol&#wh5g&6010g'
 
+# poder acceder desde el modo seguro
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -95,9 +102,3 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'paulfulll20@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 
-#EMAIL_USE_TLS = True
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = 'paulfulll20@gmail.com'
-#EMAIL_HOST_PASSWORD = 'awesome1992'
-#EMAIL_PORT = 583
-#http://bootswatch.com/slate/
