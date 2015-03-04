@@ -23,7 +23,7 @@ DATABASES['default'] =  dj_database_url.config()
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '1fiu7j@xgimz28u0kcvvfrr*wrizb+=+5p6lol&#wh5g&6010g'
 
-# poder acceder desde el modo seguro
+# para poder acceder desde el modo seguro
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -87,9 +87,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 STATIC_URL_IMG = '/static/image/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+# Simplified static file serving.
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
