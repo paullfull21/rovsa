@@ -1,0 +1,1 @@
+web: gunicorn rovsa.wsgi --log-file -
